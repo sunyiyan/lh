@@ -1,13 +1,23 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view/>
+    <ul>
+      <li>
+        <a @click="$goRoute('/First')">走着</a>
+      </li>
+    </ul>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'app',
+  data(){
+    return{
+      route:'/First'
+    }
+  }
 }
 </script>
 
