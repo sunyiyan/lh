@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 
 Vue.config.productionTip = false
+//声明公共方法
 Vue.prototype.$goRoute = function (index){
   this.$router.push(index)
 }
@@ -12,6 +13,6 @@ Vue.prototype.$goRoute = function (index){
 /* eslint-disable no-new */
 new Vue({
   router,
-  render:h =>h(App)
-}).$mount('#app')
+  render:h =>h(App) // app浏览器渲染
+}).$mount('#app') // 绑定app id 
 

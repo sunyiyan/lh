@@ -7,6 +7,7 @@
       <span>导航</span>
     </li>
     </ul>
+    <a @click="$goRoute('/First')">走着hello</a>
   </div>
 </template>
 
