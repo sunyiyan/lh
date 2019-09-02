@@ -5,6 +5,10 @@
     </ul>
     <h2>Ecosystem</h2>
     <ul>
+      <a v-on:click="$goRoute('/Enter')">Enter</a>
+    </ul>
+
+    <ul>
       <li>
         <a
           href="http://vue-loader.vuejs.org/"
