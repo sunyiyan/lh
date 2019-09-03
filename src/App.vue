@@ -1,7 +1,7 @@
 /**主容器页面 里面各种 子页面，子页面的跳转 形成 网页APP */ 
 <template>
   <div id="app">  
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
     <ul>
       <li>
         <a v-on:click="$goRoute('/First')">go</a>
