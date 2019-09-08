@@ -6,6 +6,7 @@
       <li>
         <a v-on:click="$goRoute('/First')">go</a>
         <a @click="$goRoute('/First')">走着</a>
+        <a @click="$goRoute('/HomeMenu')">HomeMenu</a>
       </li>
     </ul>
     <router-view></router-view>

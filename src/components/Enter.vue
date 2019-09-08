@@ -16,7 +16,7 @@
           <el-menu-item index="1">首页</el-menu-item>
           <el-submenu index="2">
             <template slot="title">我的工作台</template>
-            <el-menu-item index="2-1">花灌木类</el-menu-item>
+            <el-menu-item index="2-1" v-on:click="$goRoute('/HomeMenu')">花灌木类</el-menu-item>
             <el-menu-item index="2-2">行道树类</el-menu-item>
             <el-menu-item index="2-3">藤本植物类</el-menu-item>
             <el-menu-item index="2-4">宿根草本类</el-menu-item>
@@ -111,10 +111,10 @@
       </el-header>
 
       <el-container>
-        <el-aside width="200px">menu</el-aside>
-        <el-main>
-
+        <el-main id="enter">
+          <router-view></router-view>
         </el-main>
+        
       </el-container>
       <el-footer>about</el-footer>
     </el-container>

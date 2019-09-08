@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import First from '@/components/First'
 import Enter from '@/components/Enter'
+import HomeMenu from '@/components/HomeMenu'
 
 Vue.use(Router)
 
@@ -18,8 +19,14 @@ export default new Router({
       component:First
     },{
       path:'/Enter',
-      name:'Enter',
-      component:Enter
+      component:Enter,
+      children:[
+        {
+          path:'/HomeMenu',
+          name:'HomeMenu',
+          component:HomeMenu
+        }
+      ]
     }
   ]
 })
