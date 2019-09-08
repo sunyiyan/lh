@@ -1,8 +1,30 @@
 <template>
 
   <el-container>
-    <el-aside width="200px">
+    <el-aside width="360px">
+      <el-row>
+        <el-col
+          :span="50"
+          v-for="project in allprojects"
+          :key="project.pid"
+          :offset="1"
+        >
+          <el-card
+            shadow="hover"
+            style="width: 160px;height: 160px;"
+          >
+            <div style="padding: 6px;height: 160px;">
+              <div>
+                <div>
+                  <font size="5">{{project.pcname}}</font>
+                </div>
+                <div style="position: relative;top: 15px;text-align: center;">{{project.pname}}</div>
+              </div>
 
+            </div>
+          </el-card>
+        </el-col>
+      </el-row>
     </el-aside>
     <el-container>
       <el-header>Header</el-header>
@@ -26,7 +48,7 @@
                   </div>
                   <div style="position: relative;top: 15px;text-align: center;">{{project.pname}}</div>
                 </div>
-                
+
               </div>
             </el-card>
           </el-col>
@@ -53,50 +75,51 @@ export default {
         { name: "多花紫藤" },
         { name: "美国凌霄" },
         { name: "三叶地锦" }
-      ], allprojects:[
-            {
-                pid:'123',
-                pname:'pname',
-                pcname:'pcname1',
-                pdatesave:'2018-4-9 11:11:11',
-                ppageview:10
-            },
-            {
-                pid:'123',
-                pname:'pname',
-                pcname:'pcname2',
-                pdatesave:'2018-4-9 11:11:11',
-                ppageview:10
-            },
-            {
-                pid:'123',
-                pname:'pname',
-                pcname:'pcname',
-                pdatesave:'2018-4-9 11:11:11',
-                ppageview:10
-            },
-            {
-                pid:'123',
-                pname:'pname',
-                pcname:'pcname',
-                pdatesave:'2018-4-9 11:11:11',
-                ppageview:10
-            },
-            {
-                pid:'123',
-                pname:'pname',
-                pcname:'pcname',
-                pdatesave:'2018-4-9 11:11:11',
-                ppageview:10
-            },
-            {
-                pid:'123',
-                pname:'pname',
-                pcname:'pcname',
-                pdatesave:'2018-4-9 11:11:11',
-                ppageview:10
-            }
-        ]
+      ],
+      allprojects: [
+        {
+          pid: "123",
+          pname: "pname",
+          pcname: "pcname1",
+          pdatesave: "2018-4-9 11:11:11",
+          ppageview: 10
+        },
+        {
+          pid: "123",
+          pname: "pname",
+          pcname: "pcname2",
+          pdatesave: "2018-4-9 11:11:11",
+          ppageview: 10
+        },
+        {
+          pid: "123",
+          pname: "pname",
+          pcname: "pcname",
+          pdatesave: "2018-4-9 11:11:11",
+          ppageview: 10
+        },
+        {
+          pid: "123",
+          pname: "pname",
+          pcname: "pcname",
+          pdatesave: "2018-4-9 11:11:11",
+          ppageview: 10
+        },
+        {
+          pid: "123",
+          pname: "pname",
+          pcname: "pcname",
+          pdatesave: "2018-4-9 11:11:11",
+          ppageview: 10
+        },
+        {
+          pid: "123",
+          pname: "pname",
+          pcname: "pcname",
+          pdatesave: "2018-4-9 11:11:11",
+          ppageview: 10
+        }
+      ]
     };
   }
 };
