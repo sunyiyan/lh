@@ -22,7 +22,7 @@ export default new Router({
       component:Enter,
       children:[
         {
-          path:'/HomeMenu',
+          path:'/',
           name:'HomeMenu',
           component:HomeMenu
         }
