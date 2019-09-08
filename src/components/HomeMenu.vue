@@ -4,13 +4,20 @@
     <el-aside width="360px">
       <el-row>
         <el-col
-          :span="50"
-          v-for="project in allprojects"
-          :key="project.pid"
-          :offset="1"
+          :span="10"
+          v-for="item in vines"
+          :key="item"
+          :offset="0"
         >
 
-          <el-card
+        <div
+            shadow="hover"
+            style="width: 180px;height: 60px;"
+          >
+            {{item.name}}
+        </div>
+
+          <!-- <el-card
             shadow="hover"
             style="width: 160px;height: 160px;"
           >
@@ -20,7 +27,7 @@
               </div>
 
             </div>
-          </el-card>
+          </el-card> -->
         </el-col>
       </el-row>
     </el-aside>
