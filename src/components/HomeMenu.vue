@@ -9,15 +9,13 @@
           :key="project.pid"
           :offset="1"
         >
+
           <el-card
             shadow="hover"
             style="width: 160px;height: 160px;"
           >
             <div style="padding: 6px;height: 160px;">
               <div>
-                <div>
-                  <font size="5">{{project.pcname}}</font>
-                </div>
                 <div style="position: relative;top: 15px;text-align: center;">{{project.pname}}</div>
               </div>
 
