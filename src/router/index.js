@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import First from '@/components/First'
 import Enter from '@/components/Enter'
 import HomeMenu from '@/components/HomeMenu'
+import RightMenu from '@/components/RightMenu'
 
 Vue.use(Router)
 
@@ -24,7 +25,15 @@ export default new Router({
         {
           path:'/',
           name:'HomeMenu',
-          component:HomeMenu
+          component:HomeMenu,
+          children:[
+            {
+              path:'/',
+              name:'RightMenu',
+              component:RightMenu
+            }
+          
+          ]
         }
       ]
     }
