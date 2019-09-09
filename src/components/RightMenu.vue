@@ -1,23 +1,55 @@
 <template>
-  <div>
-    <el-row>
-      <el-col
-        :span="10"
-        v-for="item in vines"
-        :key="item"
-        :offset="0"
-      >
 
-        <div
-          shadow="hover"
-          style="width: 180px;height: 60px;"
-        >
-        {{item.name}}
-        </div>
-        
-      </el-col>
-    </el-row>
+  <div class='con'>
+    <div class="title_item_style">花灌木类</div>
+    <div v-for="item in flows">
+      <!-- order的值是整数，默认为0，整数越小，item排列越靠前 这里只给item1 和item4设置了order属性 1跟4排到了最后面，并且4在1的前面 -->
+      <div class="item_style">{{item.name}}</div>
+    </div>
+    <div class="title_item_style">行道树类</div>
+    <div v-for="item in borders">
+      <!-- order的值是整数，默认为0，整数越小，item排列越靠前 这里只给item1 和item4设置了order属性 1跟4排到了最后面，并且4在1的前面 -->
+      <div class="item_style">{{item.name}}</div>
+    </div>
+
+    <div class="title_item_style">藤本植物类</div>
+    <div v-for="item in vines">
+      <!-- order的值是整数，默认为0，整数越小，item排列越靠前 这里只给item1 和item4设置了order属性 1跟4排到了最后面，并且4在1的前面 -->
+      <div class="item_style">{{item.name}}</div>
+    </div>
+
+    <div class="title_item_style">宿根草本类</div>
+    <div v-for="item in perennials">
+      <!-- order的值是整数，默认为0，整数越小，item排列越靠前 这里只给item1 和item4设置了order属性 1跟4排到了最后面，并且4在1的前面 -->
+      <div class="item_style">{{item.name}}</div>
+    </div>
+
+    <div class="title_item_style">松柏长青类</div>
+    <div v-for="item in Evergreens">
+      <!-- order的值是整数，默认为0，整数越小，item排列越靠前 这里只给item1 和item4设置了order属性 1跟4排到了最后面，并且4在1的前面 -->
+      <div class="item_style">{{item.name}}</div>
+    </div>
+
+    <div class="title_item_style">水生植物类</div>
+    <div v-for="item in hydrophytes">
+      <!-- order的值是整数，默认为0，整数越小，item排列越靠前 这里只给item1 和item4设置了order属性 1跟4排到了最后面，并且4在1的前面 -->
+      <div class="item_style">{{item.name}}</div>
+    </div>
+
+    <div class="title_item_style">绿化小苗</div>
+    <div v-for="item in plantlets">
+      <!-- order的值是整数，默认为0，整数越小，item排列越靠前 这里只给item1 和item4设置了order属性 1跟4排到了最后面，并且4在1的前面 -->
+      <div class="item_style">{{item.name}}</div>
+    </div>
+
+    <div class="title_item_style">花卉种子</div>
+    <div v-for="item in seeds">
+      <!-- order的值是整数，默认为0，整数越小，item排列越靠前 这里只给item1 和item4设置了order属性 1跟4排到了最后面，并且4在1的前面 -->
+      <div class="item_style">{{item.name}}</div>
+    </div>
+
   </div>
+
 </template>
 
 <script>
@@ -124,4 +156,42 @@ export default {
 </script>
 
 <style>
+.con {
+  /* 要创建一个 flex 容器，只需要将一个 display: flex 属性添加到一个元素上。
+默认情况下，所有的直接子元素都被认为是 flex 项，并从左到右依次排列在一行中。
+如果 flex 项的宽度总和大于容器，那么 flex 项将按比例缩小，直到它们适应 flex 容器宽度 */
+  display: flex;
+
+  /* flex-direction 决定主轴的方向 row(默认)|row-reverse|column|column-reverse*/
+  /* flex-direction: row; */
+
+  /* flex-wrap决定当排列不下时是否换行以及换行的方式,nowrap(默认)|wrap|wrap-reverse */
+  /* flex-wrap:wrap; */
+
+  /* flex-flow是lex-direction和flex-wrap的简写形式，如：row wrap|column wrap-reverse等。默认值为row nowrap，即横向排列 不换行 */
+  flex-flow: row wrap;
+
+  /* !当主轴沿水平方向时!justify-content,决定item在主轴上的对齐方式，可能的值有flex-start（默认），flex-end，center，space-between，space-around */
+  justify-content: flex-start;
+  /* !主轴水平时!决定了item在交叉轴上的对齐方式，可能的值有flex-start|flex-end|center|baseline|stretch */
+  align-items: flex-start;
+}
+.item_style {
+  width: 120px;
+  height: 50px;
+  background: #8db6cd;
+  border: 1px solid black;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 50px;
+}
+.title_item_style {
+  width: 260px;
+  height: 50px;
+  background: #8db6cd;
+  border: 1px solid black;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 50px;
+}
 </style>
